@@ -67,7 +67,7 @@ p {
     margin: 0 0.5rem;
 }
 
-/* Стили для вазы и букета */
+
 #vase {
     position: relative;
     margin: 2rem auto;
@@ -96,14 +96,14 @@ p {
     animation: float 2s infinite ease-in-out;
 }
 
-/* Анимация для цветов в букете */
+
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
 
-/* Стили для цветов */
+
 #flowers {
     display: flex;
     flex-wrap: wrap;
@@ -124,11 +124,11 @@ p {
     transform: scale(1.2);
 }
 
-/* Скрытая кнопка */
+
 .hidden {
     display: none;
 }
-/* Основные стили */
+
 body {
     background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
     font-family: 'Pacifico', cursive;
@@ -159,7 +159,7 @@ p {
     margin-bottom: 1rem;
 }
 
-/* Прогресс-бар */
+
 .progress {
     height: 20px;
     border-radius: 10px;
@@ -172,7 +172,7 @@ p {
     transition: width 0.5s ease;
 }
 
-/* Карточки с выбором */
+
 .choice-section {
     margin: 2rem 0;
 }
@@ -218,7 +218,7 @@ p {
     100% { transform: scale(1); }
 }
 
-/* Кнопка завершения */
+
 #complete-btn {
     margin-top: 1rem;
 }
