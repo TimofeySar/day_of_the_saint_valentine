@@ -35,26 +35,28 @@
 
     <script>
         let collectedFlowers = 0;
-        const totalFlowers = 6; // Общее количество цветов
 
-        function addToBouquet(flower) {
-            const bouquet = document.getElementById('bouquet');
-            const flowerElement = document.createElement('span');
-            flowerElement.textContent = flower;
-            flowerElement.classList.add('flower-in-bouquet');
-            bouquet.appendChild(flowerElement);
+function addToBouquet(flower) {
+    const bouquet = document.getElementById('bouquet');
+    const flowerElement = document.createElement('span');
+    flowerElement.textContent = flower;
+    flowerElement.classList.add('flower-in-bouquet');
+    bouquet.appendChild(flowerElement);
 
-            collectedFlowers++;
-            if (collectedFlowers === totalFlowers) {
-                document.getElementById('complete-btn').classList.remove('hidden');
-            }
-        }
+    collectedFlowers++;
 
-        function completeTask() {
-            if (collectedFlowers === totalFlowers) {
-                window.location.href = "{{ url_for('task3') }}";
-            }
-        }
+    // Кнопка появится, если в букете хотя бы 2 цветка
+    if (collectedFlowers >=7) {
+        document.getElementById('complete-btn').classList.remove('hidden');
+    }
+}
+
+function completeTask() {
+    if (collectedFlowers >= 7) {  // Теперь можно переходить дальше с 2 цветами
+         window.location.href = "{{ url_for('task3') }}";
+    }
+}
+
     </script>
 </body>
 </html>
